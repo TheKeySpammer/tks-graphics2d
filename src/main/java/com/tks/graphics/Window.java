@@ -1,10 +1,12 @@
 package com.tks.graphics;
 
-import org.apache.log4j.Logger;
+
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.opengl.GL;
 import org.lwjgl.system.MemoryStack;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.nio.IntBuffer;
 
@@ -14,7 +16,7 @@ import static org.lwjgl.system.MemoryStack.stackPush;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
-    private final static Logger LOGGER = Logger.getLogger(Window.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(Window.class);
 
     private final String title;
 

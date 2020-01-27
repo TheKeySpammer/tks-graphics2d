@@ -1,9 +1,8 @@
 package com.tks.graphics;
 
-import org.apache.log4j.Logger;
-import org.joml.Matrix4f;
 import org.joml.Vector4f;
-import org.lwjgl.system.MemoryStack;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +10,7 @@ import java.util.Map;
 import static org.lwjgl.opengl.GL32.*;
 
 public class ShaderProgram {
-    private final static Logger LOGGER = Logger.getLogger(ShaderProgram.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(ShaderProgram.class);
 
     private final int programId;
 

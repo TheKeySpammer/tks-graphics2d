@@ -1,6 +1,5 @@
 package com.tks.graphics;
 
-
 import org.joml.Vector4f;
 
 public class App
@@ -11,6 +10,20 @@ public class App
         int h = 480;
         Window window = new Window(title, w, h, true);
         window.init();
+        drawLine(window);
+    }
+
+    private static void drawLine(Window window) throws Exception {
+        Shape shape = new Line(0.5f, 0.5f, -0.5f, -0.5f);
+        Renderer renderer = new Renderer();
+        renderer.init(shape);
+        while (!window.windowShouldClose()) {
+            renderer.render(window);
+            window.update();
+        }
+    }
+
+    private static void drawTriangle(Window window) throws Exception {
         float[] vertices = new float[]{
                 0.0f,  0.5f, 0.0f,
                 -0.5f, -0.5f, 0.0f,
